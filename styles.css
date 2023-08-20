@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+header {
+  border-bottom: 2px solid rgb(229, 231, 235);
+  text-align: center;
+  padding: 15px 0;
+}
+
+.new-book {
+  padding: 12px 20px;
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+  border-radius: 40px;
+  background-color: rgb(7, 6, 6);
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.book-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 20px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  line-height: 1.2;
+  border: 2px solid rgb(229, 231, 235);
+}
+
+.book-card button {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.remove-book-btn {
+  background-color: rgb(240, 101, 101);
+  color: #fff;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: #f0eef1;
+}
+
+.close {
+  position: absolute;
+  top: -5px;
+  right: 11px;
+  font-size: 33px;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.input, .add-book {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.add-book {
+  padding: 10px 15px;
+  background-color:rgb(73, 181, 69);
+  margin-bottom: 0;
+  font-weight: 700;
+  color: #fff;
+}
+
+.is-read {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.is-read input {
+  width: 18px;
+}
+
+/* Responsive book library */
+
+@media (max-width: 769px) {
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .book-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
